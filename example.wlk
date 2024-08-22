@@ -43,6 +43,15 @@ object manzana {
 }
 
 object pepon {
-  
+  var energia = 30
+
+  method comer(comida) {
+	energia = energia + (comida.energiaQueAporta() / 2)
+  }
+
+  method volar(distancia) {
+	energia = energia - 20 - distancia * 2 
+  }
 }
+
 
