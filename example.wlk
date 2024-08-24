@@ -55,3 +55,28 @@ object pepon {
 }
 
 
+object roque {
+	var aveActual = pepita
+	var contadorDeCenas = 0
+
+  method cambiarAve(nuevaAve) {
+	aveActual = nuevaAve
+	contadorDeCenas = 0 // vuelve a 0 cuando cambia de ave
+  }
+
+  method alimentar(comida) {
+	aveActual.comer(comida)
+	contadorDeCenas = contadorDeCenas + 1 //suma uno el contador cada vez que se alimenta
+  }
+
+  method cenas() {
+	return contadorDeCenas
+  }
+
+}
+
+
+
+
+
+
