@@ -41,3 +41,42 @@ object manzana {
 	}
 	
 }
+
+object pepon {
+  var energia = 30
+
+  method comer(comida) {
+	energia = energia + (comida.energiaQueAporta() / 2)
+  }
+
+  method volar(distancia) {
+	energia = energia - 20 - distancia * 2 
+  }
+}
+
+
+object roque {
+	var aveActual = pepita
+	var contadorDeCenas = 0
+
+  method cambiarAve(nuevaAve) {
+	aveActual = nuevaAve
+	contadorDeCenas = 0 // vuelve a 0 cuando cambia de ave
+  }
+
+  method alimentar(comida) {
+	aveActual.comer(comida)
+	contadorDeCenas = contadorDeCenas + 1 //suma uno el contador cada vez que se alimenta
+  }
+
+  method cenas() {
+	return contadorDeCenas
+  }
+
+}
+
+
+
+
+
+

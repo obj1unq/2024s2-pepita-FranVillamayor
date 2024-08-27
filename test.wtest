@@ -1,0 +1,41 @@
+import example.*
+import example.*
+import example.*
+
+describe "pepita" {
+  test "pepita come alpiste y aumenta su energia" {
+    pepita.comer(alpiste)
+
+    assert.equals(120, pepita.energia())
+  }
+
+  test "pepita vuela y disminuye su energia" {
+    assert.equals(100, pepita.energia())
+    pepita.volar(10)
+    assert.equals(80, pepita.energia())
+  }
+}
+
+describe "roque con pepon" {
+  
+  method inicialize(){
+
+    roque.cambiarAve(pepon)
+
+  }
+
+  test "roque alimenta su ave con alpiste" {
+    assert.equals(0, roque.cenas())
+    roque.alimentar(alpiste)
+    assert.equals(1, roque.cenas()
+    )
+  }
+}
+
+/* 
+1 inicializacion / Setup 
+
+2 que quiero probar / Exercise
+
+3 Assert
+*/
